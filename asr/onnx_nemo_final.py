@@ -1,5 +1,8 @@
 #Helper_functions.
 
+#This script allows us to run inferences on audio files using both the Nemo and the ONNX models.
+
+
 def softmax(logits):
     e = np.exp(logits - np.max(logits))
     return e / e.sum(axis=-1).reshape([logits.shape[0], 1])
